@@ -26,7 +26,7 @@ class User extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.File, {foreignKey: 'avatar_id', as: 'avatar'});
+    this.belongsTo(models.File, {foreignKey: 'avatar_id', as: 'avatar'});
     //o model de File pertence a tabela de usuario
     // as: nome do relacionamento
   }
